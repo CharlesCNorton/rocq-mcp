@@ -1,0 +1,91 @@
+{
+  "name": "mcp-coq-server",
+  "description": "MCP server for Coq/Rocq theorem proving",
+  "version": "1.0.0",
+  "server": {
+    "command": "node",
+    "args": ["dist/index.js"],
+    "env": {
+      "LOG_LEVEL": "info"
+    }
+  },
+  "capabilities": {
+    "tools": {
+      "categories": {
+        "core": [
+          "coq_init",
+          "coq_exec",
+          "coq_check",
+          "coq_goals",
+          "coq_search",
+          "coq_print",
+          "coq_undo",
+          "coq_reset"
+        ],
+        "proof": [
+          "coq_tactic",
+          "coq_admit",
+          "coq_abort"
+        ],
+        "files": [
+          "coq_load_file",
+          "coq_save_file",
+          "coq_compile",
+          "coq_require"
+        ],
+        "extraction": [
+          "coq_extract"
+        ],
+        "packages": [
+          "coq_opam_list",
+          "coq_opam_install",
+          "coq_opam_search"
+        ],
+        "project": [
+          "coq_project_init",
+          "coq_project_build"
+        ],
+        "libraries": [
+          "coq_ltac2",
+          "coq_equations",
+          "coq_mathcomp",
+          "coq_hammer",
+          "coq_quickchick",
+          "coq_fiat_crypto",
+          "coq_compcert",
+          "coq_iris",
+          "coq_metacoq",
+          "coq_unimath",
+          "coq_hott",
+          "coq_coqeal",
+          "coq_flocq",
+          "coq_coquelicot",
+          "coq_corn"
+        ]
+      }
+    }
+  },
+  "requirements": {
+    "coq": ">=8.14.0",
+    "node": ">=18.0.0",
+    "opam": ">=2.0.0"
+  },
+  "optional_libraries": [
+    "coq-mathcomp-ssreflect",
+    "coq-mathcomp-algebra",
+    "coq-equations",
+    "coq-ltac2",
+    "coq-iris",
+    "coq-stdpp",
+    "coq-hammer",
+    "coq-quickchick",
+    "coq-coquelicot",
+    "coq-flocq",
+    "coq-metacoq",
+    "coq-compcert",
+    "coq-hott",
+    "coq-unimath",
+    "coq-coqeal",
+    "coq-corn"
+  ]
+}
