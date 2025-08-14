@@ -1,0 +1,94 @@
+DIGEST 83bbcb5a225083f0985538ee90822484
+Fbasic_proof
+R73:87 Coq.Arith.Arith <> <> lib
+R105:118 Coq.Lists.List <> <> lib
+R128:140 Coq.Lists.List ListNotations <> mod
+prf 203:210 <> plus_0_r
+R225:227 Coq.Init.Datatypes <> nat ind
+binder 221:221 <> n:1
+R235:237 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R231:233 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
+R230:230 basic_proof <> n:1 var
+R238:238 basic_proof <> n:1 var
+prf 474:491 <> reverse_involutive
+binder 503:503 <> A:2
+R518:521 Coq.Init.Datatypes <> list ind
+R523:523 basic_proof <> A:2 var
+binder 514:514 <> l:3
+R540:542 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R529:531 Coq.Lists.List <> rev def
+R534:536 Coq.Lists.List <> rev def
+R538:538 basic_proof <> l:3 var
+R543:543 basic_proof <> l:3 var
+R705:717 Coq.Lists.List <> rev_app_distr thm
+R705:717 Coq.Lists.List <> rev_app_distr thm
+R705:717 Coq.Lists.List <> rev_app_distr thm
+def 814:822 <> factorial
+R829:831 Coq.Init.Datatypes <> nat ind
+binder 825:825 <> n:4
+R836:838 Coq.Init.Datatypes <> nat ind
+R851:851 basic_proof <> n:4 var
+R873:873 Coq.Init.Datatypes <> S constr
+R885:887 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
+R881:881 Coq.Init.Datatypes <> S constr
+R888:896 basic_proof <> factorial:5 def
+prf 946:963 <> factorial_positive
+R978:980 Coq.Init.Datatypes <> nat ind
+binder 974:974 <> n:7
+R994:996 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R983:991 basic_proof <> factorial def
+R993:993 basic_proof <> n:7 var
+ind 1113:1115 <> Vec
+constr 1149:1152 <> VNil
+constr 1168:1172 <> VCons
+binder 1118:1118 <> A:8
+R1133:1136 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1130:1132 Coq.Init.Datatypes <> nat ind
+R1156:1158 basic_proof <> Vec:9 ind
+R1160:1160 basic_proof <> A:8 var
+binder 1183:1183 <> n:11
+R1187:1190 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1186:1186 basic_proof <> A:8 var
+R1198:1201 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R1191:1193 basic_proof <> Vec:9 ind
+R1197:1197 basic_proof <> n:11 var
+R1195:1195 basic_proof <> A:8 var
+R1202:1204 basic_proof <> Vec:9 ind
+R1209:1209 Coq.Init.Datatypes <> S constr
+R1211:1211 basic_proof <> n:11 var
+R1206:1206 basic_proof <> A:8 var
+scheme 1113:1115 <> Vec_rect
+scheme 1113:1115 <> Vec_ind
+scheme 1113:1115 <> Vec_rec
+scheme 1113:1115 <> Vec_sind
+R1226:1229 basic_proof <> VNil constr
+R1226:1229 basic_proof <> VNil constr
+R1246:1250 basic_proof <> VCons constr
+R1246:1250 basic_proof <> VCons constr
+def 1313:1317 <> vhead
+binder 1320:1320 <> A:12
+R1335:1337 Coq.Init.Datatypes <> nat ind
+binder 1331:1331 <> n:13
+R1345:1347 basic_proof <> Vec ind
+R1349:1349 basic_proof <> A:12 var
+R1352:1352 Coq.Init.Datatypes <> S constr
+R1354:1354 basic_proof <> n:13 var
+binder 1341:1341 <> v:14
+R1360:1360 basic_proof <> A:12 var
+R1373:1373 basic_proof <> v:14 var
+R1384:1388 basic_proof <> VCons constr
+def 1460:1464 <> vtail
+binder 1467:1467 <> A:16
+R1482:1484 Coq.Init.Datatypes <> nat ind
+binder 1478:1478 <> n:17
+R1492:1494 basic_proof <> Vec ind
+R1496:1496 basic_proof <> A:16 var
+R1499:1499 Coq.Init.Datatypes <> S constr
+R1501:1501 basic_proof <> n:17 var
+binder 1488:1488 <> v:18
+R1507:1509 basic_proof <> Vec ind
+R1511:1511 basic_proof <> A:16 var
+R1513:1513 basic_proof <> n:17 var
+R1526:1526 basic_proof <> v:18 var
+R1537:1541 basic_proof <> VCons constr
+R1585:1602 basic_proof <> factorial_positive prfax

@@ -1,0 +1,50 @@
+export declare class CoqManager {
+    private sessions;
+    private activeSessionId;
+    initSession(libraries?: string[], workspace?: string): Promise<string>;
+    executeCommand(command: string, sessionId?: string): Promise<string>;
+    checkType(term: string): Promise<string>;
+    getGoals(detailed?: boolean): Promise<string>;
+    search(pattern: string, type?: string): Promise<string>;
+    print(name: string, options?: string[]): Promise<string>;
+    undo(steps?: number): Promise<string>;
+    reset(point?: string): Promise<string>;
+    loadFile(filePath: string, compile?: boolean): Promise<string>;
+    saveFile(filePath: string, content?: string): Promise<string>;
+    compile(filePath: string, options?: string[]): Promise<string>;
+    requireLibrary(library: string, doImport?: boolean, doExport?: boolean): Promise<string>;
+    applyTactic(tactic: string, all?: boolean): Promise<string>;
+    admit(): Promise<string>;
+    abort(): Promise<string>;
+    getInfo(): Promise<string>;
+    extract(target: string, definitions: string[], output?: string): Promise<string>;
+    opamList(filter?: string): Promise<string>;
+    opamInstall(packageName: string, version?: string): Promise<string>;
+    opamSearch(query: string): Promise<string>;
+    projectInit(name: string, projectPath: string, libraries?: string[]): Promise<string>;
+    projectBuild(projectPath: string, system?: string): Promise<string>;
+    executeLtac2(code: string): Promise<string>;
+    executeEquations(definition: string): Promise<string>;
+    executeMathComp(command: string, module?: string): Promise<string>;
+    executeHammer(mode?: string, timeout?: number): Promise<string>;
+    executeQuickChick(property: string, samples?: number): Promise<string>;
+    executeFiatCrypto(operation: string, parameters?: any): Promise<string>;
+    executeCompCert(command: string): Promise<string>;
+    executeIris(logic: string, heap?: string): Promise<string>;
+    executeMetaCoq(command: string, term?: string): Promise<string>;
+    executeUniMath(module: string | undefined, command: string): Promise<string>;
+    executeHoTT(command: string): Promise<string>;
+    executeCoqEAL(operation: string): Promise<string>;
+    executeFlocq(command: string): Promise<string>;
+    executeCoquelicot(command: string): Promise<string>;
+    executeCoRN(command: string): Promise<string>;
+    private getSession;
+    closeSession(sessionId?: string): Promise<void>;
+    closeAllSessions(): Promise<void>;
+    getSessionInfo(): {
+        active: string | null;
+        total: number;
+        ids: string[];
+    };
+}
+//# sourceMappingURL=coq-manager.d.ts.map
